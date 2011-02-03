@@ -28,3 +28,18 @@ The following is a sample VHOST you might want to consider for your project.
    </Directory>
     
 </VirtualHost>
+
+
+
+SETUP DATABASE
+==============
+username: 	root
+password:	
+host:		localhost
+
+First, setup the mysql database, create user 'root' and no password. This is dont so we dont
+have to worry about this during developement. Then create a database called 'guestbook'.
+The files to setup the database schema and insert data is in /application/data/db/scripts/
+
+Here is how we dump commands into the database
+"mysql -u root -h localhost < relative_file_path"
