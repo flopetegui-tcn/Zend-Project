@@ -1,0 +1,47 @@
+<?php 
+	echo "Error<br/>";
+	echo count($this->errorMessages);
+	echo $this->errorMessages;
+	if(!empty($this->errorMessages)){	
+
+		$emailMessages  = $this->errorMessages['email'];
+		foreach($emailMessages as $message){
+			echo $message . "<br/>";
+		}
+		
+		$passwordMessages  = $this->errorMessages['password'];
+		foreach($passwordMessages as $message){
+			echo $message . "<br/>";
+		}
+	}
+?>
+
+<form method="post" enctype="application/x-www-form-urlencoded" action="/login-form/login">
+<div id="login_form" class="form"><div class="form_inner">
+
+	<div class="form-element">
+		<label>Email Address:</label>
+		<input type="text" name="email" value="<?php echo $this->loginFormElements['email'] ?>" />		
+	</div>
+	<div class="form-element">
+		<label>Password:</label> 
+		<input type="password" name="password" />		
+	</div>
+
+	<div class="form-element">
+		<label>Re-Enter Password:</label> 
+		<input type="password" name="password_confirm" />		
+	</div>
+
+	<div class="form-submit">
+		<input type="submit" name="submit" id="submit" value="Sign Guestbook"/>
+	</div>
+	
+</div></div>
+</form>
+
+
+
+
+<!-- dd id="email-element">
+<input type="text" value="" id="email" name="email"></dd></dl></form -->

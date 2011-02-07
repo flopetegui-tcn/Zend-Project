@@ -1,7 +1,7 @@
-CREATE TABLE guestbook (
+CREATE TABLE user (
     id INTEGER NOT NULL PRIMARY KEY AUTO_INCREMENT ,
     email VARCHAR(32) NOT NULL DEFAULT 'noemail@test.com',
-    comment TEXT NULL,
+    password
     created DATETIME NOT NULL
 );
  
